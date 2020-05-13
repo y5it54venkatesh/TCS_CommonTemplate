@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <parameter name="OperatingSystem" value="Windows 10"/>
+  <parameter name="browserName" value="chrome"/>
+  <test name="Test(failed)">
+    <parameter name="OperatingSystem" value="Windows 10"/>
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="Learning.Learning.home_Driver">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="setUp" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- Learning.Learning.home_Driver -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
