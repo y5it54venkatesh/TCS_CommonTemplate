@@ -19,6 +19,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -143,7 +144,7 @@ public class reusablemethods {
 		for(int i=1;i<=maxrows;i++) {
 			for(int j=0;j<maxCols;j++) {				
 					arrayData[i-1][j]=wrksheet.getRow(i).getCell(j).toString();
-					System.out.println(arrayData[i-1][j]);
+					//System.out.println(arrayData[i-1][j]);
 			}
 		}		
 		return arrayData;		
@@ -235,6 +236,38 @@ public static void reportUpdate(String ActualVal, String ExpecetedValue, String 
 	fso_Output.close();
 	
 }
+
+public static void click(String Xpath) throws IOException {	
+	
+	try {
+		if (driver.findElement(By.xpath(Xpath)).isEnabled()){
+			driver.findElement(By.xpath(Xpath)).click();		
+		}		
+	}
+	catch(Exception ex) {
+		ex.getMessage();
+		reportUpdate("Looking for element to be visible and click","element is not visible","Fail");		
+	}
+	
+}
+
+
+
+public static void enterText(String Xpath,String input) throws IOException {	
+	
+	try {
+		if (driver.findElement(By.xpath(Xpath)).isEnabled()){
+			driver.findElement(By.xpath(Xpath)).sendKeys(input);		
+		}		
+	}
+	catch(Exception ex) {
+		ex.getMessage();
+		reportUpdate("Looking for element to be visible and click","element is not visible","Fail");		
+	}
+	
+}
+
+
 
 }
 

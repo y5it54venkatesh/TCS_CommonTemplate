@@ -13,20 +13,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import reusableComponent.reusablemethods;
+import reusableComponent.identifiers;
 
 public class subPages extends reusablemethods {
 	
 	
-	public static void registration() throws IOException {
-		driver.findElement(By.xpath(".//*[@href='mercuryregister.php']")).click();
-		driver.findElement(By.xpath(".//*[@name='firstName']")).sendKeys("Venkatesh");
-		reportUpdate("Registartion Process started","Registartion Process Completed","Pass");
-		
-	}
+	
 	
 	public static void subScribe() throws IOException, InterruptedException {
-		driver.findElement(By.xpath(".//*[@id='address']")).sendKeys("madhuri1622@gmail.com");
-		driver.findElement(By.xpath(".//*[@class='btn btn-primary']")).click();
+		//driver.findElement(By.xpath(".//*[@id='address']")).sendKeys("madhuri1622@gmail.com");		
+		//driver.findElement(By.xpath(identifiers.subscribeaddress_txt)).sendKeys("madhuri1622@gmail.com");
+		
+		enterText(identifiers.subscribeaddress_txt,"madhuri1622@gmail.com");		
+		click(identifiers.subscribe_btn);		
+		//driver.findElement(By.xpath(".//*[@class='btn btn-primary']")).click();
+		
 		Thread.sleep(4000);
 		alertAccept();
 		reportUpdate("Subscribed successfully","Subscribed successfully","Pass");
