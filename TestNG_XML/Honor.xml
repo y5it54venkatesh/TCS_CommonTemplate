@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HonorPhone">
+  <test thread-count="5" name="HonorPhone">
+    <classes>
+      <class name="Learning.Learning.HonorPhoneValidation"/>
+    </classes>
+  </test> <!-- HonorPhone -->
+</suite> <!-- HonorPhone -->

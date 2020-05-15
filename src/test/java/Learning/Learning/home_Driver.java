@@ -1,22 +1,10 @@
 package Learning.Learning;
 
-
-
-import reusableComponent.reusablemethods;
 import subPages.subPages;
 import org.testng.annotations.Test;
-import org.testng.log4testng.Logger;
+import reusableComponent.reusablemethods;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -48,7 +36,7 @@ public class home_Driver {
 		objresuable.Setrow(TestCaseNum);
 		
 		if(UserData.equalsIgnoreCase("YES")){
-			System.out.println(UserData);
+			
 			Reporter.log("New Test case Execution started:- Test case number: "+TestCaseNum);	
 			objresuable.launchBrowser();
 			//objresuable.screenshots();	

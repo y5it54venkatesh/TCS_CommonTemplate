@@ -1,29 +1,31 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 5, Time elapsed: 6.108 sec <<< FAILURE! - in TestSuite
-beforeTest(Learning.Learning.home_Driver)  Time elapsed: 5.898 sec  <<< FAILURE!
-org.openqa.selenium.UnsupportedCommandException: Misconfigured -- Invalid type received for 'version', got '80.0' of type '<type 'float'>' but Sauce OnDemand expects 'string'.
-
-The following desired capabilities were received:
-{'browserName': 'chrome',
- 'platform': 'Win10',
- 'version': 80.0}
-Command duration or timeout: 4.99 seconds
-Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
-System info: host: 'DESKTOP-R3LUB47', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:126)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:153)
-	at reusableComponent.reusablemethods.browserSetup(reusablemethods.java:31)
-	at Learning.Learning.home_Driver.beforeTest(home_Driver.java:34)
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 3.837 s <<< FAILURE! - in TestSuite
+Learning.Learning.HonorPhoneValidation.beforeTest  Time elapsed: 3.681 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: UIAutomation2 is only supported since Android 5.0 (Lollipop). You could still use other supported backends in order to automate older Android versions.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-R3LUB47', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: UIAutomation2 is only supported since Android 5.0 (Lollipop). You could still use other supported backends in order to automate older Android versions.
+    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-R3LUB47', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: AndroidDriver
+	at Learning.Learning.HonorPhoneValidation.beforeTest(HonorPhoneValidation.java:58)
+Caused by: java.lang.reflect.InvocationTargetException
+	at Learning.Learning.HonorPhoneValidation.beforeTest(HonorPhoneValidation.java:58)
+Caused by: org.openqa.selenium.WebDriverException: 
+An unknown server-side error occurred while processing the command. Original error: UIAutomation2 is only supported since Android 5.0 (Lollipop). You could still use other supported backends in order to automate older Android versions.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-R3LUB47', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: UIAutomation2 is only supported since Android 5.0 (Lollipop). You could still use other supported backends in order to automate older Android versions.
+    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+	at Learning.Learning.HonorPhoneValidation.beforeTest(HonorPhoneValidation.java:58)
 

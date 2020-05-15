@@ -39,8 +39,6 @@ public class reusablemethods {
 	
 	
 	
-	
-	
 	public void SetCurrentPath(String path) {
 		this.currentReport_Path=path;	
 		
