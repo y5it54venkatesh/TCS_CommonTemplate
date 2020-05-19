@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [Suite]">
-  <parameter name="OperatingSystem" value="Windows 10"/>
-  <parameter name="browserName" value="chrome"/>
   <test name="Test(failed)">
-    <parameter name="OperatingSystem" value="Windows 10"/>
-    <parameter name="browserName" value="chrome"/>
     <classes>
-      <class name="Learning.Learning.home_Driver">
+      <class name="Learning.Learning.watsappFromWeb">
         <methods>
-          <include name="beforeSuite"/>
-          <include name="setUp"/>
           <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- Learning.Learning.home_Driver -->
+      </class> <!-- Learning.Learning.watsappFromWeb -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

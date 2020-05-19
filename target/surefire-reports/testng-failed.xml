@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [HonorPhone]">
-  <test name="HonorPhone(failed)">
+<suite verbose="0" name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
-      <class name="Learning.Learning.HonorPhoneValidation">
+      <class name="Learning.Learning.watsappFromWeb">
         <methods>
           <include name="beforeTest"/>
+          <include name="afterTest"/>
           <include name="f"/>
         </methods>
-      </class> <!-- Learning.Learning.HonorPhoneValidation -->
+      </class> <!-- Learning.Learning.watsappFromWeb -->
     </classes>
-  </test> <!-- HonorPhone(failed) -->
-</suite> <!-- Failed suite [HonorPhone] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,31 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 3.837 s <<< FAILURE! - in TestSuite
-Learning.Learning.HonorPhoneValidation.beforeTest  Time elapsed: 3.681 s  <<< FAILURE!
-org.openqa.selenium.SessionNotCreatedException: 
-Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: UIAutomation2 is only supported since Android 5.0 (Lollipop). You could still use other supported backends in order to automate older Android versions.
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 977.602 s <<< FAILURE! - in TestSuite
+Learning.Learning.watsappFromWeb.f  Time elapsed: 924.882 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+disconnected: Unable to receive message from renderer
+  (Session info: chrome=81.0.4044.138)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-R3LUB47', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: UIAutomation2 is only supported since Android 5.0 (Lollipop). You could still use other supported backends in order to automate older Android versions.
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-R3LUB47', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: AndroidDriver
-	at Learning.Learning.HonorPhoneValidation.beforeTest(HonorPhoneValidation.java:58)
-Caused by: java.lang.reflect.InvocationTargetException
-	at Learning.Learning.HonorPhoneValidation.beforeTest(HonorPhoneValidation.java:58)
-Caused by: org.openqa.selenium.WebDriverException: 
-An unknown server-side error occurred while processing the command. Original error: UIAutomation2 is only supported since Android 5.0 (Lollipop). You could still use other supported backends in order to automate older Android versions.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-R3LUB47', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: UIAutomation2 is only supported since Android 5.0 (Lollipop). You could still use other supported backends in order to automate older Android versions.
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-	at Learning.Learning.HonorPhoneValidation.beforeTest(HonorPhoneValidation.java:58)
+System info: host: 'DESKTOP-36QD24D', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\VENKAT~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52165}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: deac71859a0505fda983ebb2a2837301
+	at Learning.Learning.watsappFromWeb.f(watsappFromWeb.java:57)
 

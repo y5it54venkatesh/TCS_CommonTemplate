@@ -4,6 +4,9 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 import java.io.File;
 
@@ -38,41 +41,116 @@ public class HonorPhoneValidation {
 		//OS Name
 	
 		 
-		 capabilities.setCapability("deviceName", "192.168.0.101:5555");
+		 capabilities.setCapability("deviceName", "GJN9K17407900914");
+		 
+		 //capabilities.setCapability("deviceName", "192.168.0.101:5555");
+		 		 
 
 		//Set BROWSER_NAME desired capability to Android.
 		//capabilities.setCapability(CapabilityType.BROWSER_NAME, "Android");
 
 		//Set android VERSION from device desired capability.
-		capabilities.setCapability(CapabilityType.VERSION, "4.4.2");
+		capabilities.setCapability(CapabilityType.VERSION, "5.1");
 
 		// Set android platformName desired capability to Android.
 		capabilities.setCapability("platformName", "Android");
-
-		// Set android appPackage desired capability.
-		capabilities.setCapability("appPackage", "com.android.calculator2");
-
-		// Set android appActivity desired capability.
+		
+		capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);		
+		capabilities.setCapability(MobileCapabilityType.NO_RESET,false);
+		
+				
+		/* - Calculator
+		capabilities.setCapability("appPackage", "com.android.calculator2");		
 		capabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
-		 
+		*/
+		
+		/*Youtube
+		capabilities.setCapability("appPackage", "com.google.android.youtube");
+		capabilities.setCapability("appActivity", "com.google.android.apps.youtube.app.WatchWhileActivity");
+		 */
+		
+
+		capabilities.setCapability("appPackage", "com.facebook.mlite");
+		capabilities.setCapability("appActivity", "com.facebook.mlite.coreui.view.MainActivity");
+		
+		
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		
+		Thread.sleep(20000);
+		
+		
+		
+		
+		//Facebook
+		driver.findElement(By.xpath(".//*[contains(@content-desc,'Email or phone number')]")).sendKeys("mutyala.ramanamma@gmail.com");		
+		Thread.sleep(6000);		
+		driver.findElement(By.xpath(".//*[contains(@content-desc,'Password')]")).sendKeys("8939477600");		
+		Thread.sleep(6000);		
+		driver.findElement(By.id("com.facebook.mlite:id/login_login_button")).click();		
+		Thread.sleep(10000);		
+		driver.findElement(By.xpath(".//*[@text='Not Now']")).click();
+		Thread.sleep(6000);		
+		driver.findElement(By.xpath(".//*[@content-desc='PrashantiVenkatesh Muthyala']")).click();		
+		Thread.sleep(6000);
+		//driver.findElement(By.id("com.whatsapp:id/verify_sms_code_input")).sendKeys("");
+		
+		
+		for(int i=0;i<100;i++) {
+			
+		Thread.sleep(5000);
+		
+		try {
+		
+			if(driver.findElement(By.xpath(".//*[@text='Active Now']]")).isEnabled()){
+				if(driver.findElement(By.xpath(".//*[@text='Active Now']]")).isDisplayed()){
+					System.out.println("Displayed now");
+				}
+			}
+		}
+		catch(Exception ex) {
+			System.out.println("no element found Small exception");
+		}
+		
+		
+		}
+		
+		
+		/*
+		watsapp
+		driver.findElement(By.id("com.whatsapp:id/eula_accept")).click();		
+		Thread.sleep(6000);		
+		driver.findElement(By.id("com.whatsapp:id/registration_cc")).sendKeys("91");		
+		Thread.sleep(6000);		
+		driver.findElement(By.id("com.whatsapp:id/registration_phone")).sendKeys("9553155727");		
+		Thread.sleep(6000);		
+		driver.findElement(By.id("com.whatsapp:id/registration_submit")).click();
+		Thread.sleep(6000);		
+		driver.findElement(By.id("android:id/button1")).click();		
+		Thread.sleep(6000);
+		//driver.findElement(By.id("com.whatsapp:id/verify_sms_code_input")).sendKeys("");
+		*/
+		
+		
+		/* Youtube
+		capabilities.setCapability("appPackage", "com.google.android.youtube");
+		capabilities.setCapability("appActivity", "com.google.android.apps.youtube.app.WatchWhileActivity");
+		*/
+		driver.findElement(By.id("com.google.android.youtube:id/menu_item_1")).click();
+		Thread.sleep(6000);
+		driver.findElement(By.id("com.google.android.youtube:id/search_edit_text")).sendKeys("Venkatesh");
+		Thread.sleep(6000);
+		//((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
+		Thread.sleep(6000);
+		driver.findElement(By.id("com.google.android.youtube:id/left_thumbnail")).click();
 		Thread.sleep(6000);
 		
-		driver.close();
+		
+		Thread.sleep(20000);		
 		
 		driver.quit();
 		
-		//driver.findElement(By.id("com.android.calculator2:id/digit_4")).click();
-
-		//driver.findElement(By.id("com.android.calculator2:id/op_add")).click();
-
-		//driver.findElement(By.id("com.android.calculator2:id/digit_8")).click();
-
-		//driver.findElement(By.id("com.android.calculator2:id/eq")).click();
 
 		//String result = driver.findElement(By.className("android.widget.EditText")).getText();
-
 		//System.out.println("Result of Addition is : " + result);
 		
 		
