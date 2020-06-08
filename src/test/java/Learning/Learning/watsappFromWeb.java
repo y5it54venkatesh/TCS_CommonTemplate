@@ -46,45 +46,31 @@ WebDriver driver;
   public void f() throws InterruptedException {
 	  	  
 		
-		for(int i=0;i<360;i++) {
-			//driver.manage().window().setSize(new Dimension(1920, 1080));
-			//Thread.sleep(10000);
-			
-			
-			
-			for(int j=0;j<50;i++) {
-				
-				driver.findElement(By.xpath(".//*[@data-icon='search-alt']")).click();
-				//Thread.sleep(2000);
-				
-				//driver.findElement(By.xpath(".//*[@data-icon='search-alt']")).click();
-				
-				//driver.manage().window().setSize(new Dimension(1920, 1075));
-				Thread.sleep(3000);			
-			
+		for(int i=0;i<1000;i++) {			
+			for(int j=0;j<50;i++) {				
+				driver.findElement(By.xpath(".//*[@data-icon='search-alt']")).click();				
+				Thread.sleep(3000);						
 			Date obj=new Date();
 			
 			try {				
 				if(driver.findElement(By.xpath(".//*[@title='online']")).isEnabled()){
 					if(driver.findElement(By.xpath(".//*[@title='online']")).isDisplayed()){
-						System.out.println("Displayed now:-"+obj.getHours()+"_"+obj.getMinutes()+"_"+obj.getSeconds());
-						
+						System.out.println("Displayed now:-"+obj.getHours()+"_"+obj.getMinutes()+"_"+obj.getSeconds());						
 						
 					}
 				}
 			}
 			catch(Exception ex) {
-				//System.out.println("Not displayed");
+				//System.out.println("Not displayed");			
 			}
-			
-			
-			
 		}
-		}
-  }
+		
+	}
+		
+}
   
   
-  @AfterTest
+ @AfterTest
   public void afterTest() {	  
 	  driver.quit();
   }

@@ -15,53 +15,80 @@
 
   <dependencies>
   
-  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-		<dependency>
-    		<groupId>io.cucumber</groupId>
-    		<artifactId>cucumber-testng</artifactId>
-    		<version>2.0.0</version>
-		</dependency>
-  
-  
-  		<dependency>
- 			<groupId>info.cukes</groupId>
- 			<artifactId>cucumber-java</artifactId>
- 			<version>1.1.5</version>
- 			<scope>test</scope>
- 		</dependency>
- 
- 		<dependency>
- 			<groupId>info.cukes</groupId>
- 			<artifactId>cucumber-jvm</artifactId>
- 			<version>1.1.5</version>
- 			<type>pom</type>
- 		</dependency>
- 
- 		<dependency>
- 			<groupId>info.cukes</groupId>
- 			<artifactId>cucumber-junit</artifactId>
- 			<version>1.1.5</version>
- 			<scope>test</scope>
- 		</dependency>
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>5.7.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>4.5.4</version>
+    <scope>test</scope>
+</dependency>
+
+
+
+
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-picocontainer</artifactId>
+    <version>4.1.0</version>
+    <scope>test</scope>
+</dependency>
+
+
+
+
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-spring -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-spring</artifactId>
+    <version>4.3.0</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/tag-expressions -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>tag-expressions</artifactId>
+    <version>2.0.2</version>
+</dependency>
+
+
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/datatable -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>datatable</artifactId>
+    <version>1.1.6</version>
+</dependency>
+
+
+
+
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-plugin -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-plugin</artifactId>
+    <version>5.1.1</version>
+</dependency>
+
  		<dependency>
  			<groupId>net.sourceforge.cobertura</groupId>
  			<artifactId>cobertura</artifactId>
  			<version>2.1.1</version>
  		</dependency>
  		<dependency>
- 			<groupId>info.cukes</groupId>
- 			<artifactId>cucumber-jvm-deps</artifactId>
- 			<version>1.0.5</version>
- 		</dependency>
- 		<dependency>
  			<groupId>net.masterthought</groupId>
  			<artifactId>cucumber-reporting</artifactId>
  			<version>1.0.0</version>
- 		</dependency>
- 		<dependency>
- 			<groupId>info.cukes</groupId>
- 			<artifactId>gherkin</artifactId>
- 			<version>2.12.2</version>
  		</dependency>
  		<dependency>
  			<groupId>org.mockito</groupId>
@@ -102,36 +129,19 @@
       <scope>test</scope>
     </dependency>
     
+  <dependency>
+   <groupId>com.sun</groupId>
+   <artifactId>tools</artifactId>
+   <version>1.8</version>
+   <scope>system</scope>
+   <systemPath>C:\Program Files\Java\jdk1.8.0_251\lib\tools.jar</systemPath>
+ </dependency>   
+ 
    
-   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java 
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.141.5</version>
-    <scope>test</scope>
-</dependency>
--->
-   
-   
-   <!--
-    <dependency>
-      <groupId>com.github.detro.ghostdriver</groupId>
-      <artifactId>phantomjsdriver</artifactId>
-      <version>1.1.0</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.seleniumhq.selenium</groupId>
-          <artifactId>selenium-remote-driver</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.seleniumhq.selenium</groupId>
-          <artifactId>selenium-server</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    
-   -->
   </dependencies>
+  
+
+ 
   <build>
     <resources>
       <resource>
@@ -157,14 +167,15 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M4</version>
+        
+        
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testNG_XML/watsappBrowser.xml</suiteXmlFile>          
-          </suiteXmlFiles>
-          <systemPropertyVariables>
-            <application.properties>/application.properties</application.properties>
-          </systemPropertyVariables>
+            <suiteXmlFile>testNG_XML/testng.xml</suiteXmlFile>          
+          </suiteXmlFiles>          
         </configuration>
+        
+        
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -174,6 +185,7 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+      
     </plugins>
   </build>
  
